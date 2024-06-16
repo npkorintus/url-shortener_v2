@@ -17,6 +17,11 @@ import iconFullyCustomizable from './assets/images/icon-fully-customizable.svg';
 import bgBoostMobile from './assets/images/bg-boost-mobile.svg';
 import bgBoostDesktop from './assets/images/bg-boost-desktop.svg';
 
+import iconFacebook from './assets/images/icon-facebook.svg';
+import iconInstagram from './assets/images/icon-instagram.svg';
+import iconPinterest from './assets/images/icon-pinterest.svg';
+import iconTwitter from './assets/images/icon-twitter.svg';
+
 function App() {
   // const [count, setCount] = useState(0)
   const [width, setWidth] = useState(window.innerWidth);
@@ -68,9 +73,10 @@ function App() {
         </form>
       </section>
 
-      <section className='url-list' style={{ background: 'yellow' }}></section>
+      {/* <section className='url-list' style={{ background: 'yellow' }}></section> */}
 
       <section className='main-content' style={{ background: 'whitesmoke' }}>
+        <div className='url-list'>url list</div>
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
         <div className='card-container'>
@@ -98,31 +104,44 @@ function App() {
         </div>
 
         <div className='cta' style={{ backgroundImage: `url(${isMobile ? bgBoostMobile : bgBoostDesktop})`, backgroundColor: 'hsl(257, 27%, 26%)' }}>
-          <h3 className='cta-heading'>Boost your links today</h3>
-          <button className='btn-round'>Get Started</button>
+          <div className='cta-content'>
+            <h3 className='cta-heading'>Boost your links today</h3>
+            <button className='btn-round'>Get Started</button>
+          </div>
         </div>
       </section>
 
-      <footer className='footer' style={{ background: 'violet' }}>
-        <div className='logo-container'></div>
-        <h5>Features</h5>
-        <p>Link Shortening</p>
-        <p>Branded Links</p>
-        <p>Analytics</p>
-        <h5>Resources</h5>
-        <p>Blog</p>
-        <p>Developers</p>
-        <p>Support</p>
-        <h5>Company</h5>
-        <p>About</p>
-        <p>Our Team</p>
-        <p>Careers</p>
-        <p>Contact</p>
+      <footer className='footer' style={{ background: 'hsl(260, 8%, 14%)' }}>
+        <div className='logo-container'>
+          {/* <img className='header-image' alt='shortly logo' src={shortlyLogo} /> */}
+          <h2 style={{ color: 'white' }}>Shortly</h2>
+        </div>
+        <div className='list'>
+          <div className='sublist'>
+            <h4 style={{ margin: 0, color: 'white' }}>Features</h4>
+            <p>Link Shortening</p>
+            <p>Branded Links</p>
+            <p>Analytics</p>
+          </div>
+          <div className='sublist'>
+            <h4 style={{ margin: 0, color: 'white' }}>Resources</h4>
+            <p>Blog</p>
+            <p>Developers</p>
+            <p>Support</p>
+          </div>
+          <div className='sublist'>
+            <h4 style={{ margin: 0, color: 'white' }}>Company</h4>
+            <p>About</p>
+            <p>Our Team</p>
+            <p>Careers</p>
+            <p>Contact</p>
+          </div>
+        </div>
         <div className='social-links'>
-          <span>facebook | </span>
-          <span>twitter | </span>
-          <span>pinterest | </span>
-          <span>instagram</span>
+          <i className='social-icon'><img src={iconFacebook} /></i>
+          <i className='social-icon'><img src={iconTwitter} /></i>
+          <i className='social-icon'><img src={iconPinterest} /></i>
+          <i className='social-icon'><img src={iconInstagram} /></i>
         </div>
       </footer>
     </>

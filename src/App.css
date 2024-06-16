@@ -26,6 +26,7 @@
   padding: 16px 0;
   margin-right: 16px;
   margin-left: 16px;
+  transform: translateY(56px);
 }
 
 .url-input {
@@ -65,10 +66,46 @@
 
 .main-content {
   padding: 0;
+  padding-top: 80px;
 }
 
 .cta {
   height: 300px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.cta-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.cta-heading {
+  color: white;
+}
+
+.card-container {
+  padding: 16px;
+}
+
+.logo-container {
+  padding: 40px 0;
+}
+
+.social-links {
+  padding: 30px 0 60px;
+}
+
+.social-icon {
+  margin: 0 16px;
+}
+
+.footer {
+  /* display: flex;
+  justify-content: space-around; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -118,12 +155,48 @@
     /* padding: 0; */
   }
 
+  .main-content > h2 {
+    padding-top: 20px;
+  }
+
   .card-container {
     display: flex;
     flex-direction: row;
+    padding: 0;
   }
 
   .card {
     margin: 24px;
+  }
+
+  .cta {
+    height: 248px;
+    /* background-size: auto; */
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding-bottom: 64px;
+  }
+
+  .list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .sublist {
+    text-align: left;
+    /* padding: 40px 0;  */
+    margin-left: 56px;
+  }
+
+  .sublist > h4 {
+    padding-bottom: 16px;
+  }
+
+  .sublist > p {
+    margin: 8px 0;
   }
 }
