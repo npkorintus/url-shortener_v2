@@ -8,6 +8,7 @@ const baseUrl = 'https://cleanuri.com/api/v1/shorten';
 function UrlForm(props) {
   const { isMobile } = props.isMobile;
   const [input, setInput] = useState('');
+  // const [formData, setFormData] = useState();
 
   const shortenUrl = async() => {
     const postData = {
@@ -22,6 +23,8 @@ function UrlForm(props) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({ url: input })
+      // body: `url: ${input}`
+      // body: formData
     }
 
     try {
@@ -42,19 +45,35 @@ function UrlForm(props) {
     event.preventDefault();
     console.log('input: ', input)
 
-    shortenUrl();
+    // shortenUrl();
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch('/api/v1/shorten', { method: form.method, body: formData })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Network response was not ok.`);
+        }
+        console.log('response: ', response)
+        return response.json();
+      })
+      .then(data => {
+        console.log(data)
+      })
+      .catch(error => console.error('Error: ', error));
   }
 
   return (
     <section className='form-container' style={{ background: `url(${isMobile ? bgShortenMobile : bgShortenDesktop})`, backgroundColor: 'hsl(257, 27%, 26%)' }}>
-      <form className='url-form' onSubmit={handleSubmit}>
+      <form method='post' className='url-form' onSubmit={handleSubmit}>
         <div className='input-container'>
           <input
             className='url-input'
             type='text'
-            name='urlInput'
+            name='url'
             value={input}
             placeholder='Shorten a link here...'
+            // required
             onChange={(e) => setInput(e.target.value)}
           />
         </div>
