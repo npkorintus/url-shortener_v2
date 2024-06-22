@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-import bgShortenMobile from '../assets/images/bg-shorten-mobile.svg';
-import bgShortenDesktop from '../assets/images/bg-shorten-desktop.svg';
+import bgShortenMobile from '../../assets/images/bg-shorten-mobile.svg';
+import bgShortenDesktop from '../../assets/images/bg-shorten-desktop.svg';
+
+import './UrlForm.css';
 
 const baseUrl = 'https://cleanuri.com/api/v1/shorten';
 

@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.hero {
+/* .hero {
   overflow: hidden;
 }
 
@@ -14,14 +14,13 @@
 }
 
 .hero-image-container {
-  /* transform: translateX(200px); */
 }
 
 .hero-image {
   max-width: 100%;
-}
+} */
 
-.form-container {
+/* .form-container {
   border-radius: 4px;
   padding: 16px 0;
   margin-right: 16px;
@@ -40,9 +39,9 @@
 .btn-submit {
   width: 90%;
   margin-top: 16px;
-}
+} */
 
-.card {
+/* .card {
   background: white;
   margin: 24px 0;
   padding: 24px;
@@ -59,14 +58,20 @@
 }
 
 .card-img > img {
-  /* padding: 16px; */
-  /* transform: translate(0px, 25px); */
   padding: 24px;
-}
+} */
 
-.main-content {
+/* .main-content {
   padding: 0;
   padding-top: 80px;
+}
+
+.url-card {
+  background: white;
+  border-radius: 8px;
+  margin: 16px;
+  padding: 8px;
+  display: block;
 }
 
 .cta {
@@ -89,9 +94,9 @@
 
 .card-container {
   padding: 16px;
-}
+} */
 
-.logo-container {
+/* .logo-container {
   padding: 40px 0;
 }
 
@@ -101,7 +106,7 @@
 
 .social-icon {
   margin: 0 16px;
-}
+} */
 
 .footer {
   /* display: flex;
@@ -109,22 +114,20 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .hero {
+  /* .hero {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
   }
 
-  .hero-image-container {
-    /* transform: translateX(140px); */
-  }
+  .hero-image-container {}
 
   .heading-container {
     text-align: left;
     margin-right: 20px;
-  }
+  } */
 
-  .form-container {
+  /* .form-container {
     padding: 32px;
   }
 
@@ -149,14 +152,22 @@
   .btn-submit {
     width: 100%;
     margin-top: 0;
-  }
+  } */
 
-  .main-content {
-    /* padding: 0; */
-  }
+  /* .main-content {}
 
   .main-content > h2 {
     padding-top: 20px;
+  }
+
+  .url-card {
+    background: white;
+    margin: 16px;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card-container {
@@ -171,10 +182,9 @@
 
   .cta {
     height: 248px;
-    /* background-size: auto; */
-  }
+  } */
 
-  .footer {
+  /* .footer {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
@@ -188,7 +198,6 @@
 
   .sublist {
     text-align: left;
-    /* padding: 40px 0;  */
     margin-left: 56px;
   }
 
@@ -198,5 +207,5 @@
 
   .sublist > p {
     margin: 8px 0;
-  }
+  } */
 }

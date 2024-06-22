@@ -1,9 +1,13 @@
 import React from 'react';
 
-import iconFacebook from '../assets/images/icon-facebook.svg';
-import iconInstagram from '../assets/images/icon-instagram.svg';
-import iconPinterest from '../assets/images/icon-pinterest.svg';
-import iconTwitter from '../assets/images/icon-twitter.svg';
+import iconFacebook from '../../assets/images/icon-facebook.svg';
+import iconInstagram from '../../assets/images/icon-instagram.svg';
+import iconPinterest from '../../assets/images/icon-pinterest.svg';
+import iconTwitter from '../../assets/images/icon-twitter.svg';
+
+import './Footer.css';
+
+const socials = [];
 
 function Footer() {
   return (

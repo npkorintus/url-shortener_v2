@@ -1,6 +1,8 @@
 import React from 'react';
 
-import illustrationWorking from '../assets/images/illustration-working.svg';
+import illustrationWorking from '../../assets/images/illustration-working.svg';
+
+import './Hero.css';
 
 function Hero() {
   return (

@@ -5,7 +5,7 @@ import './App.css'
 
 import shortlyLogo from './assets/images/logo.svg';
 import illustrationWorking from './assets/images/illustration-working.svg';
-import workingImg from '../public/illustration-working.svg';
+// import workingImg from '../public/illustration-working.svg';
 
 import bgShortenMobile from './assets/images/bg-shorten-mobile.svg';
 import bgShortenDesktop from './assets/images/bg-shorten-desktop.svg';
@@ -55,7 +55,6 @@ function App() {
     <>
       <Header />
       <Hero />
-
       <UrlForm isMobile={isMobile} />
 
       {/* <section className='url-list' style={{ background: 'yellow' }}></section> */}
