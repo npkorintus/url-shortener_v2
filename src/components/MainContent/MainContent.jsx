@@ -40,7 +40,7 @@ function MainContent(props) {
             <div>{url.shortenedUrl}</div>
             <button className='btn-copy' onClick={() => navigator.clipboard.writeText(url.shortenedUrl)}>Copy</button>
           </div> */}
-          <div className='long-url' style={{ width: '40%', textAlign: 'left' }}>{url.originalUrl}</div>
+          <div className='long-url'>{url.originalUrl}</div>
           {isMobile && <hr />}
           <div className='short-url' style={{ width: '40%', textAlign: 'right' }}>{url.shortenedUrl}</div>
           <div className='copy-btn-container'

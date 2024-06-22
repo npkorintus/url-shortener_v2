@@ -10,6 +10,24 @@
   display: block;
   /* justify-content: space-between;
   align-items: center; */
+  font-weight: 500;
+}
+
+.long-url {
+  width: 100%;
+  text-align: left;
+  padding: 4px 0;
+}
+
+.short-url {
+  width: 100%;
+  text-align: left;
+  color: hsl(180, 66%, 49%);
+  padding: 4px 0;
+}
+
+.copy-btn-container {
+  margin-top: 16px;
 }
 
 .card {
@@ -72,6 +90,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .long-url {
+    width: 40%;
+    text-align: left;
+    padding: 0;
+  }
+
+  .short-url {
+    width: 40%;
+    text-align: right ;
+    padding: 0;
+  }
+
+  .copy-btn-container {
+    margin-top: 0;
   }
 
   .card-container {
