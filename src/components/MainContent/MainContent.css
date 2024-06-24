@@ -8,8 +8,6 @@
   margin: 16px;
   padding: 8px;
   display: block;
-  /* justify-content: space-between;
-  align-items: center; */
   font-weight: 500;
 }
 
@@ -30,6 +28,14 @@
   margin-top: 16px;
 }
 
+.btn-copy {
+  background: hsl(180, 66%, 49%);
+}
+
+.btn-copied {
+  background: hsl(257, 27%, 26%);
+}
+
 .card {
   background: white;
   margin: 24px 0;
@@ -47,8 +53,6 @@
 }
 
 .card-img > img {
-  /* padding: 16px; */
-  /* transform: translate(0px, 25px); */
   padding: 24px;
 }
 
@@ -76,8 +80,6 @@
 
 /* Table and Desktop */
 @media only screen and (min-width: 768px) {
-  .main-content {}
-
   .main-content > h2 {
     padding-top: 20px;
   }

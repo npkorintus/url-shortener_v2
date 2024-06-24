@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import iconBrandRecognition from '../../assets/images/icon-brand-recognition.svg';
 import iconDetailedRecords from '../../assets/images/icon-detailed-records.svg';
@@ -7,9 +7,6 @@ import iconFullyCustomizable from '../../assets/images/icon-fully-customizable.s
 import bgBoostMobile from '../../assets/images/bg-boost-mobile.svg';
 import bgBoostDesktop from '../../assets/images/bg-boost-desktop.svg';
 
-import urls from '../../../mockData';
-
-// import '../../App.css';
 import './MainContent.css';
 
 const cards = [
@@ -25,9 +22,7 @@ const copyToClipboard = (text) => {
 function MainContent(props) {
   console.log('props: ', props)
   const { isMobile, urlList } = props;
-  console.log('mainContent isMobile: ', isMobile)
-
-  console.log('urlList:', urlList)
+  const [copiedUrl, setCopiedUrl] = useState(null);
 
   return (
     <section className='main-content'>
@@ -42,7 +37,18 @@ function MainContent(props) {
           <div className='copy-btn-container'
             // style={{ width: '15%' }}
           >
-            <button style={{ width: isMobile ? '100%' : '120px' }} className='btn-copy' onClick={() => navigator.clipboard.writeText(url.shortenedUrl)}>Copy</button>
+            <button
+              style={{
+                width: isMobile ? '100%' : '120px',
+              }}
+              className={copiedUrl === index ? 'btn-copied' : 'btn-copy'}
+              onClick={() => {
+                navigator.clipboard.writeText(url.shortenedUrl);
+                setCopiedUrl(index);
+              }}
+            >
+              {copiedUrl === index ? 'Copied!' : 'Copy'}
+            </button>
           </div>
         </div>
       ))}
