@@ -15,5 +15,6 @@ export default defineConfig({
         ws: true
       }
     }
-  }
+  },
+  base: '/url-shortener_v2'
 })
