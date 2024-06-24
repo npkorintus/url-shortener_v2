@@ -24,25 +24,21 @@ const copyToClipboard = (text) => {
 
 function MainContent(props) {
   console.log('props: ', props)
-  const { isMobile } = props;
+  const { isMobile, urlList } = props;
   console.log('mainContent isMobile: ', isMobile)
-  console.log('urls: ', urls)
+
+  console.log('urlList:', urlList)
 
   return (
     <section className='main-content'>
       <div className='url-list'>url list</div>
-      {urls.length > 0 && urls.map((url, index) => (
+      {urlList.length > 0 && urlList.map((url, index) => (
         <div key={index} className='url-card'
           // style={{ width: '100%' }}
         >
-          {/* <div>{url.originalUrl}</div>
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <div>{url.shortenedUrl}</div>
-            <button className='btn-copy' onClick={() => navigator.clipboard.writeText(url.shortenedUrl)}>Copy</button>
-          </div> */}
-          <div className='long-url'>{url.originalUrl}</div>
+          <div className='long-url'>{url.longUrl}</div>
           {isMobile && <hr />}
-          <div className='short-url' style={{ width: '40%', textAlign: 'right' }}>{url.shortenedUrl}</div>
+          <div className='short-url' style={{ width: '40%', textAlign: 'right' }}>{url.shortUrl}</div>
           <div className='copy-btn-container'
             // style={{ width: '15%' }}
           >

@@ -5,49 +5,13 @@ import bgShortenDesktop from '../../assets/images/bg-shorten-desktop.svg';
 
 import './UrlForm.css';
 
-const baseUrl = 'https://cleanuri.com/api/v1/shorten';
-
 function UrlForm(props) {
-  const { isMobile } = props.isMobile;
+  const { isMobile, setUrlList } = props;
   const [input, setInput] = useState('');
-  // const [formData, setFormData] = useState();
-
-  const shortenUrl = async() => {
-    const postData = {
-      // headers: {
-      //   "Access-Control-Allow-Origin": "*",
-      //   "Content-Type": "application/json"
-      // },
-      // method: 'POST',
-      mode:  'no-cors',
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ url: input })
-      // body: `url: ${input}`
-      // body: formData
-    }
-
-    try {
-      const response = fetch(baseUrl, postData);
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok.');
-      }
-
-      const data = await response.json();
-      console.log('data: ', data)
-    } catch (error) {
-      console.error(`Error: ${error}`)
-    }
-  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('input: ', input)
 
-    // shortenUrl();
     const form = event.target;
     const formData = new FormData(form);
 
@@ -61,6 +25,7 @@ function UrlForm(props) {
       })
       .then(data => {
         console.log(data)
+        setUrlList((prevUrls) => [...prevUrls, { longUrl: input, shortUrl: data.result_url }]);
       })
       .catch(error => console.error('Error: ', error));
   }
