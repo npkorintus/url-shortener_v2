@@ -12,7 +12,8 @@ export default defineConfig({
         target: 'https://cleanuri.com',
         changeOrigin: true,
         secure: false,
-        ws: true
+        ws: true,
+        base: '/url-shortener_v2'
       }
     }
   },
