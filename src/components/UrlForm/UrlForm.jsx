@@ -15,7 +15,7 @@ function UrlForm(props) {
     const form = event.target;
     const formData = new FormData(form);
 
-    fetch('api/v1/shorten', { method: form.method, body: formData })
+    fetch('/api/v1/shorten', { method: form.method, body: formData })
       .then(response => {
         if (!response.ok) {
           throw new Error(`Network response was not ok.`);
