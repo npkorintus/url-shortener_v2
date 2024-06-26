@@ -28,5 +28,5 @@ export default defineConfig({
       }
     }
   },
-  // base: '/url-shortener_v2'
+  base: '/url-shortener_v2'
 })
